@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disha Computer Institute | Job-Oriented Career Training & Placements</title>
+<meta name="description" content="Disha Computer Institute (Disha Group) - 200+ branches, 20+ years of training excellence. Industry-aligned courses with 70% practical training and 90% placement support.">
+
+<!-- Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome 6.4 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --corp-blue:#1a365d;
+    --corp-blue-bright:#0d6efd;
+    --amber:#f59e0b;
+    --coral:#ff6b6b;
+    --soft:#f8f9fa;
+    --white:#ffffff;
+    --ink:#1f2937;
+    --muted:#6b7280;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family:'Poppins',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,h5,h6{font-weight:700;letter-spacing:-.5px}
+  .section-pad{padding:80px 0}
+  .text-amber{color:var(--amber)!important}
+  .text-coral{color:var(--coral)!important}
+  .bg-corp{background:var(--corp-blue)!important}
+  .bg-soft{background:var(--soft)!important}
+
+  /* Announcement Bar */
+  .announce-bar{
+    background:linear-gradient(90deg,#102746,#1a365d);
+    color:#e2e8f0;
+    font-size:.82rem;
+    padding:8px 0;
+  }
+  .announce-bar a{color:#fff;transition:.2s}
+  .announce-bar a:hover{color:var(--amber)}
+  .ticker-wrap{overflow:hidden;white-space:nowrap}
+  .ticker{display:inline-block;animation:ticker 18s linear infinite;padding-left:100%}
+  @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+  /* Navbar */
+  .navbar{
+    background:rgba(255,255,255,.96)!important;
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 20px rgba(26,54,93,.08);
+    transition:.3s;
+    padding:.7rem 0;
+  }
+  .navbar .navbar-brand{font-weight:700;font-size:1.35rem;color:var(--corp-blue)}
+  .brand-logo{
+    width:42px;height:42px;border-radius:11px;
+    background:linear-gradient(135deg,var(--corp-blue),var(--corp-blue-bright));
+    display:inline-flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;margin-right:10px;
+    box-shadow:0 6px 16px rgba(13,110,253,.3);
+  }
+  .brand-sub{font-size:.62rem;color:var(--amber);font-weight:600;letter-spacing:1.5px;display:block;line-height:1}
+  .nav-link{font-weight:600;color:var(--ink)!important;margin:0 4px;position:relative}
+  .nav-link::after{
+    content:'';position:absolute;left:12px;right:12px;bottom:2px;height:2px;
+    background:var(--amber);transform:scaleX(0);transition:.3s;transform-origin:left;
+  }
+  .nav-link:hover::after{transform:scaleX(1)}
+  .btn-amber{
+    background:var(--amber);color:#fff;font-weight:600;border:none;
+    box-shadow:0 6px 18px rgba(245,158,11,.35);transition:.25s;
+  }
+  .btn-amber:hover{background:#d97f06;color:#fff;transform:translateY(-2px)}
+  .btn-corp{background:var(--corp-blue);color:#fff;font-weight:600;border:none;transition:.25s}
+  .btn-corp:hover{background:#102746;color:#fff;transform:translateY(-2px)}
+  .btn-outline-light-amber{border:2px solid #fff;color:#fff;font-weight:600;background:transparent;transition:.25s}
+  .btn-outline-light-amber:hover{background:#fff;color:var(--corp-blue)}
+
+  /* Hero */
+  .hero{
+    background:
+      linear-gradient(115deg,rgba(16,39,70,.94),rgba(26,54,93,.82)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover;
+    color:#fff;padding:120px 0 90px;position:relative;
+  }
+  .hero h1{font-size:3rem;line-height:1.15}
+  .hero .lead{color:#dbe4f0;font-weight:300;font-size:1.1rem;max-width:620px}
+  .hero-badge{
+    display:inline-block;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);
+    color:var(--amber);font-weight:600;font-size:.8rem;padding:6px 16px;border-radius:30px;margin-bottom:20px;
+  }
+  .metric-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:16px;padding:22px 16px;text-align:center;
+    backdrop-filter:blur(6px);transition:.3s;height:100%;
+  }
+  .metric-card:hover{background:rgba(255,255,255,.16);transform:translateY(-5px)}
+  .metric-card .num{font-size:2rem;font-weight:700;color:var(--amber);line-height:1}
+  .metric-card .lbl{font-size:.82rem;color:#dbe4f0;margin-top:8px}
+  .metric-card i{font-size:1.4rem;color:#fff;margin-bottom:8px}
+
+  /* Section headings */
+  .sec-eyebrow{color:var(--amber);font-weight:600;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+  .sec-title{font-size:2.2rem;color:var(--corp-blue)}
+  .sec-divider{width:70px;height:4px;background:var(--amber);border-radius:4px;margin:14px auto 0}
+
+  /* Filter tabs */
+  .filter-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
+  .filter-btn{
+    border:2px solid var(--corp-blue);background:transparent;color:var(--corp-blue);
+    font-weight:600;padding:9px 24px;border-radius:30px;transition:.25s;cursor:pointer;
+  }
+  .filter-btn:hover{background:rgba(26,54,93,.08)}
+  .filter-btn.active{background:var(--corp-blue);color:#fff;box-shadow:0 8px 20px rgba(26,54,93,.25)}
+
+  /* Course cards */
+  .course-card{
+    background:#fff;border-radius:18px;border:1px solid #eef1f5;overflow:hidden;
+    box-shadow:0 8px 30px rgba(26,54,93,.06);transition:.35s;height:100%;display:flex;flex-direction:column;
+  }
+  .course-card:hover{transform:translateY(-8px);box-shadow:0 18px 45px rgba(26,54,93,.16)}
+  .course-head{padding:24px 24px 16px;position:relative}
+  .course-icon{
+    width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    font-size:1.5rem;color:#fff;margin-bottom:16px;
+  }
+  .ic-blue{background:linear-gradient(135deg,#0d6efd,#1a365d)}
+  .ic-amber{background:linear-gradient(135deg,#f59e0b,#d97706)}
+  .ic-coral{background:linear-gradient(135deg,#ff6b6b,#e63946)}
+  .ic-green{background:linear-gradient(135deg,#10b981,#059669)}
+  .badge-dur{
+    position:absolute;top:24px;right:24px;background:var(--soft);color:var(--corp-blue);
+    font-weight:600;font-size:.72rem;padding:6px 12px;border-radius:20px;border:1px solid #e2e8f0;
+  }
+  .badge-prac{
+    display:inline-block;background:rgba(245,158,11,.13);color:#b45309;
+    font-weight:600;font-size:.72rem;padding:4px 12px;border-radius:20px;margin-bottom:12px;
+  }
+  .course-card h5{color:var(--corp-blue);font-size:1.1rem;line-height:1.3}
+  .course-card .desc{color:var(--muted);font-size:.88rem;flex-grow:1;padding:0 24px}
+  .tool-stack{display:flex;flex-wrap:wrap;gap:8px;padding:16px 24px 0}
+  .tool-pill{
+    display:inline-flex;align-items:center;gap:5px;background:var(--soft);border:1px solid #eef1f5;
+    color:#475569;font-size:.72rem;font-weight:500;padding:5px 10px;border-radius:8px;
+  }
+  .tool-pill i{color:var(--corp-blue-bright)}
+  .course-foot{padding:18px 24px 24px;margin-top:auto}
+  .cat-tag{font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--amber)}
+
+  /* Placement section */
+  .placement-sec{
+    background:linear-gradient(160deg,#102746,#1a365d);color:#fff;
+  }
+  .place-card{
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:16px;
+    padding:28px 22px;text-align:center;transition:.3s;height:100%;
+  }
+  .place-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.13);border-color:rgba(245,158,11,.4)}
+  .place-card .pic{
+    width:70px;height:70px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;color:#fff;background:linear-gradient(135deg,var(--amber),#d97706);
+  }
+  .place-card h6{font-weight:700;font-size:1.05rem}
+  .place-card .role{color:var(--amber);font-size:.82rem;font-weight:600;margin-bottom:8px}
+  .place-card .pkg{color:#dbe4f0;font-size:.8rem}
+  .audience-pill{
+    display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4);
+    color:var(--amber);font-weight:500;padding:8px 18px;border-radius:30px;margin:5px;font-size:.85rem;
+  }
+
+  /* Inquiry */
+  .inquiry-form{background:#fff;border-radius:20px;padding:40px;box-shadow:0 20px 50px rgba(26,54,93,.1)}
+  .form-control,.form-select{border-radius:10px;padding:12px 14px;border:1.5px solid #e2e8f0}
+  .form-control:focus,.form-select:focus{border-color:var(--amber);box-shadow:0 0 0 .2rem rgba(245,158,11,.15)}
+  .contact-item{display:flex;gap:16px;margin-bottom:24px}
+  .contact-item .ci-icon{
+    width:48px;height:48px;min-width:48px;border-radius:12px;background:rgba(245,158,11,.15);
+    color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  }
+
+  /* Footer */
+  footer{background:#0c1f38;color:#cbd5e1}
+  footer h6{color:#fff}
+  footer a{color:#cbd5e1;text-decoration:none;transition:.2s}
+  footer a:hover{color:var(--amber)}
+  .foot-social a{
+    width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);
+    display:inline-flex;align-items:center;justify-content:center;color:#fff;margin-right:8px;transition:.25s;
+  }
+  .foot-social a:hover{background:var(--amber)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);font-size:.85rem;color:#94a3b8}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(30px);transition:.7s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  @media(max-width:768px){
+    .hero h1{font-size:2.1rem}
+    .sec-title{font-size:1.7rem}
+    .section-pad{padding:55px 0}
+    .inquiry-form{padding:26px}
+  }
+</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav">
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="announce-bar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <div class="d-none d-md-block">
+      <i class="fas fa-building-circle-check text-amber me-1"></i> 200+ Branches Nationwide
+      <span class="mx-2 opacity-50">|</span>
+      <i class="fas fa-award text-amber me-1"></i> 20+ Years Training Experience
+    </div>
+    <div class="d-flex align-items-center gap-3 flex-grow-1 flex-md-grow-0 justify-content-end">
+      <div class="ticker-wrap d-none d-lg-block" style="width:280px">
+        <span class="ticker">🎉 1,250+ students placed this quarter • New Data Analyst batch starting soon • GST-ready Tally Prime certification now live!</span>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <span class="brand-logo">D</span>
+      <span>Disha Computer Institute
+        <span class="brand-sub">DISHA GROUP</span>
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#placements">Placements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <button class="btn btn-amber rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#hireModal">
+            <i class="fas fa-briefcase me-1"></i> Hire From Us
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="hero-badge"><i class="fas fa-rocket me-1"></i> Career Accelerator Since 2004</span>
+        <h1>Learn Industry-Aligned Courses & <span class="text-amber">Secure Your Future</span></h1>
+        <p class="lead mt-3">Professional Training with Hands-on 70% Practical Experience & 90% Dedicated Placement Support. Master In-Demand Tech, Accounting, Design, and Analytical Skills.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#courses" class="btn btn-amber rounded-pill px-4 py-2 btn-lg">
+            <i class="fas fa-laptop-code me-2"></i>Explore Job-Oriented Courses
+          </a>
+          <button class="btn btn-outline-light-amber rounded-pill px-4 py-2 btn-lg" data-bs-toggle="modal" data-bs-target="#hireModal">
+            <i class="fas fa-handshake me-2"></i>Hire From Us
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-5 mt-lg-0">
+        <div class="row g-3">
+          <div class="col-6"><div class="metric-card"><i class="fas fa-medal"></i><div class="num">20+</div><div class="lbl">Years of Training Excellence</div></div></div>
+          <div class="col-6"><div class="metric-card"><i class="fas fa-map-location-dot"></i><div class="num">200+</div><div class="lbl">Regional Institute Branches</div></div></div>
+          <div class="col-6"><div class="metric-card"><i class="fas fa-flask"></i><div class="num">70%</div><div class="lbl">Hands-on Practical Labs</div></div></div>
+          <div class="col-6"><div class="metric-card"><i class="fas fa-user-tie"></i><div class="num">90%</div><div class="lbl">Direct Placement Track Record</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ COURSE CATALOGUE ============ -->
+<section class="section-pad" id="courses">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="sec-eyebrow">Skill Up · Stand Out</span>
+      <h2 class="sec-title mt-2">Our Industry-Demanded Programs</h2>
+      <div class="sec-divider"></div>
+      <p class="text-muted mt-3 mx-auto" style="max-width:640px">Choose from job-ready diploma tracks and fast short-term certifications — every program is built around live projects, real tools, and direct placement assistance.</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs reveal">
+      <button class="filter-btn active" data-filter="all"><i class="fas fa-border-all me-1"></i>All Programs</button>
+      <button class="filter-btn" data-filter="diploma"><i class="fas fa-graduation-cap me-1"></i>Diploma Programs</button>
+      <button class="filter-btn" data-filter="certificate"><i class="fas fa-certificate me-1"></i>Short-Term Certifications</button>
+    </div>
+
+    <div class="row g-4" id="courseGrid">
+
+      <!-- DDGA -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="diploma">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>6 Months</span>
+            <div class="course-icon ic-coral"><i class="fas fa-palette"></i></div>
+            <span class="cat-tag">Diploma Program</span>
+            <h5 class="mt-1">Diploma in Digital Graphics & Animation (DDGA)</h5>
+          </div>
+          <p class="desc">Master graphic design, animation, video editing, VFX, and modern UI stacks. Build a job-ready creative portfolio from scratch.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-image"></i>Photoshop</span>
+            <span class="tool-pill"><i class="fas fa-bezier-curve"></i>CorelDRAW</span>
+            <span class="tool-pill"><i class="fab fa-bootstrap"></i>Bootstrap</span>
+            <span class="tool-pill"><i class="fab fa-wordpress"></i>WordPress</span>
+            <span class="tool-pill"><i class="fab fa-php"></i>PHP</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Diploma in Digital Graphics & Animation (DDGA)">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DCIT -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="diploma">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>6 Months</span>
+            <div class="course-icon ic-blue"><i class="fas fa-code"></i></div>
+            <span class="cat-tag">Diploma Program</span>
+            <h5 class="mt-1">Diploma in Information Technology (DCIT)</h5>
+          </div>
+          <p class="desc">Core programming fundamentals, professional office tools, C, Object-Oriented C++, and Python workflow automation for modern IT roles.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-c"></i>C Language</span>
+            <span class="tool-pill"><i class="fas fa-code"></i>C++ (OOP)</span>
+            <span class="tool-pill"><i class="fab fa-python"></i>Python</span>
+            <span class="tool-pill"><i class="fas fa-file-word"></i>MS Office</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Diploma in Information Technology (DCIT)">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DCGA -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="diploma">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>6 Months</span>
+            <div class="course-icon ic-amber"><i class="fas fa-pen-ruler"></i></div>
+            <span class="cat-tag">Diploma Program</span>
+            <h5 class="mt-1">Diploma in Graphics & Office Automation (DCGA)</h5>
+          </div>
+          <p class="desc">A high-utility blend of creative graphic arts, digital asset assembly, and professional office administration tools including Tally Prime.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-image"></i>Photoshop</span>
+            <span class="tool-pill"><i class="fas fa-bezier-curve"></i>CorelDRAW</span>
+            <span class="tool-pill"><i class="fas fa-table-cells"></i>MS Excel</span>
+            <span class="tool-pill"><i class="fas fa-calculator"></i>Tally Prime</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Diploma in Graphics & Office Automation (DCGA)">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced Excel -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="certificate">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>2 Months</span>
+            <div class="course-icon ic-green"><i class="fas fa-table-cells-large"></i></div>
+            <span class="cat-tag">Certification</span>
+            <h5 class="mt-1">Certificate in Advanced Excel</h5>
+          </div>
+          <p class="desc">Master Pivot Tables, VLOOKUP, Power Query, VBA Macros, and MIS business reporting modules used across corporate finance teams.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-table"></i>Pivot Tables</span>
+            <span class="tool-pill"><i class="fas fa-magnifying-glass"></i>VLOOKUP</span>
+            <span class="tool-pill"><i class="fas fa-bolt"></i>Power Query</span>
+            <span class="tool-pill"><i class="fas fa-code"></i>VBA Macros</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Certificate in Advanced Excel">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tally Prime -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="certificate">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>2 Months</span>
+            <div class="course-icon ic-amber"><i class="fas fa-calculator"></i></div>
+            <span class="cat-tag">Certification</span>
+            <h5 class="mt-1">Certificate in Tally Prime</h5>
+          </div>
+          <p class="desc">Comprehensive real-world Indian business accounting — company creation, voucher management, GST return filings, and TDS compliance.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-receipt"></i>GST Filing</span>
+            <span class="tool-pill"><i class="fas fa-file-invoice-dollar"></i>TDS</span>
+            <span class="tool-pill"><i class="fas fa-book"></i>Vouchers</span>
+            <span class="tool-pill"><i class="fas fa-building"></i>Company Setup</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Certificate in Tally Prime">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analyst -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="certificate">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>2 Months</span>
+            <div class="course-icon ic-blue"><i class="fas fa-chart-line"></i></div>
+            <span class="cat-tag">Certification</span>
+            <h5 class="mt-1">Certificate in Data Analyst</h5>
+          </div>
+          <p class="desc">Build analytics data models across Excel, SQL, Power BI, Tableau, and data mining pipelines to launch a high-growth analytics career.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-table-cells"></i>Excel</span>
+            <span class="tool-pill"><i class="fas fa-database"></i>SQL</span>
+            <span class="tool-pill"><i class="fas fa-chart-pie"></i>Power BI</span>
+            <span class="tool-pill"><i class="fas fa-chart-column"></i>Tableau</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Certificate in Data Analyst">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="certificate">
+        <div class="course-card">
+          <div class="course-head">
+            <span class="badge-dur"><i class="far fa-clock me-1"></i>2 Months</span>
+            <div class="course-icon ic-coral"><i class="fas fa-server"></i></div>
+            <span class="cat-tag">Certification</span>
+            <h5 class="mt-1">Certificate in MySQL Server</h5>
+          </div>
+          <p class="desc">Database normalization, structured queries, ACID transactions, stored procedures, and secure cloud storage configurations.</p>
+          <div class="tool-stack">
+            <span class="tool-pill"><i class="fas fa-database"></i>MySQL</span>
+            <span class="tool-pill"><i class="fas fa-sitemap"></i>Normalization</span>
+            <span class="tool-pill"><i class="fas fa-gears"></i>Procedures</span>
+            <span class="tool-pill"><i class="fas fa-cloud"></i>Cloud Storage</span>
+          </div>
+          <div class="course-foot">
+            <span class="badge-prac"><i class="fas fa-flask me-1"></i>70% Practical</span>
+            <button class="btn btn-corp w-100 rounded-pill mt-2 syllabus-btn" data-course="Certificate in MySQL Server">
+              <i class="fas fa-file-lines me-1"></i>Request Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLACEMENTS ============ -->
+<section class="placement-sec section-pad" id="placements">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="sec-eyebrow">Real Careers · Real Results</span>
+      <h2 class="sec-title text-white mt-2">Transforming Ambition into Careers</h2>
+      <div class="sec-divider"></div>
+      <p class="mt-3 mx-auto" style="max-width:680px;color:#dbe4f0">From beginners and students after 10th/12th to fresh graduates — Disha equips every learner with corporate-ready toolsets and direct placement support that turns skills into salaries.</p>
+    </div>
+
+    <div class="text-center mb-5 reveal">
+      <span class="audience-pill"><i class="fas fa-user-graduate me-1"></i>Students after 10th & 12th</span>
+      <span class="audience-pill"><i class="fas fa-seedling me-1"></i>Absolute Beginners</span>
+      <span class="audience-pill"><i class="fas fa-user-tie me-1"></i>Graduates & Job Seekers</span>
+      <span class="audience-pill"><i class="fas fa-arrows-rotate me-1"></i>Career Switchers</span>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-calculator"></i></div>
+          <h6>Priya Sharma</h6>
+          <div class="role">Accountant</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>Tally Prime Track</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹3.2 LPA Placement</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-palette"></i></div>
+          <h6>Rahul Verma</h6>
+          <div class="role">Graphic Designer</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>DDGA Diploma</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹3.8 LPA Placement</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-chart-line"></i></div>
+          <h6>Anjali Mehta</h6>
+          <div class="role">MIS Executive</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>Advanced Excel</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹4.1 LPA Placement</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-laptop-code"></i></div>
+          <h6>Aman Khan</h6>
+          <div class="role">Full-Stack Developer</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>DCIT + PHP Stack</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹5.5 LPA Placement</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-database"></i></div>
+          <h6>Sneha Patel</h6>
+          <div class="role">Data Analyst</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>Power BI & SQL</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹4.8 LPA Placement</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-server"></i></div>
+          <h6>Vikram Singh</h6>
+          <div class="role">Database Administrator</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>MySQL Server</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹4.5 LPA Placement</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-file-invoice"></i></div>
+          <h6>Kavya Nair</h6>
+          <div class="role">GST & Tax Associate</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>Tally Prime</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹3.6 LPA Placement</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="place-card">
+          <div class="pic"><i class="fas fa-pen-nib"></i></div>
+          <h6>Rohan Das</h6>
+          <div class="role">UI / Web Designer</div>
+          <p class="pkg mb-0"><i class="fas fa-building me-1"></i>DCGA Diploma</p>
+          <p class="pkg"><i class="fas fa-indian-rupee-sign me-1"></i>₹4.0 LPA Placement</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INQUIRY & CONTACT ============ -->
+<section class="section-pad bg-soft" id="contact">
+  <div class="container">
+    <div class="row g-5 align-items-stretch">
+      <!-- Form -->
+      <div class="col-lg-7 reveal">
+        <div class="inquiry-form h-100">
+          <span class="sec-eyebrow">Get Started Today</span>
+          <h2 class="sec-title mt-2" style="font-size:1.8rem">Schedule a Free Career Counseling Session</h2>
+          <p class="text-muted">Speak with our career advisors — we'll help you choose the right course, branch, and placement track. No fees, no obligation.</p>
+          <form id="inquiryForm" class="row g-3 mt-2" novalidate>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Contact Number</label>
+              <input type="tel" class="form-control" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Preferred Course Category</label>
+              <select class="form-select" name="category" required>
+                <option value="" selected disabled>Select a category</option>
+                <option>Diploma Programs</option>
+                <option>Short-Term Certifications</option>
+                <option>Not sure — need guidance</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Branch Location</label>
+              <input type="text" class="form-control" name="branch" placeholder="City / Nearest branch" required>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-amber rounded-pill px-5 py-2 btn-lg w-100 w-md-auto">
+                <i class="fas fa-paper-plane me-2"></i>Book My Free Counseling
+              </button>
+            </div>
+            <div class="col-12">
+              <div id="formMsg" class="alert alert-success d-none mt-2 mb-0">
+                <i class="fas fa-circle-check me-1"></i> Thank you! Our career advisor will contact you within 24 hours.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="col-lg-5 reveal">
+        <div class="h-100 d-flex flex-column justify-content-center ps-lg-3">
+          <span class="sec-eyebrow">Reach Disha Group</span>
+          <h2 class="sec-title mt-2" style="font-size:1.8rem">Visit or Connect With Us</h2>
+          <div class="mt-4">
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h6 class="mb-1 fw-bold">Head Office</h6>
+                <p class="text-muted mb-0">Disha Group Corporate Tower, Civil Lines,<br>Main City Center — serving 200+ branches nationwide.</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone-volume"></i></div>
+              <div>
+                <h6 class="mb-1 fw-bold">Admissions Helpline</h6>
+                <p class="text-muted mb-0">+91 98765 43210 (Mon–Sat, 9 AM – 7 PM)</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div>
+                <h6 class="mb-1 fw-bold">Business & Hiring Inquiries</h6>
+                <p class="text-muted mb-0">careers@dishagroup.in | admissions@dishagroup.in</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h6 class="mb-1 fw-bold">New Batches</h6>
+                <p class="text-muted mb-0">Weekday & weekend batches starting every month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="navbar-brand d-flex align-items-center text-white mb-3" href="#home" style="font-size:1.3rem;font-weight:700">
+          <span class="brand-logo">D</span> Disha Computer Institute
+        </a>
+        <p style="font-size:.9rem">Empowering careers for 20+ years through job-oriented training, hands-on practical labs, and dedicated placement support across 200+ branches nationwide.</p>
+        <div class="foot-social mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled" style="font-size:.9rem;line-height:2">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#placements">Placements</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 class="fw-bold mb-3">Popular Programs</h6>
+        <ul class="list-unstyled" style="font-size:.9rem;line-height:2">
+          <li><a href="#courses">Digital Graphics & Animation</a></li>
+          <li><a href="#courses">Information Technology</a></li>
+          <li><a href="#courses">Advanced Excel & MIS</a></li>
+          <li><a href="#courses">Tally Prime (GST)</a></li>
+          <li><a href="#courses">Data Analyst</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Stay Updated</h6>
+        <p style="font-size:.9rem">Get the latest batch alerts and placement news.</p>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Your email" style="border-radius:10px 0 0 10px">
+          <button class="btn btn-amber" style="border-radius:0 10px 10px 0" onclick="subscribeNews(event)"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <small id="newsMsg" class="text-amber d-block mt-2"></small>
+      </div>
+    </div>
+    <div class="foot-bottom text-center mt-4 pt-3">
+      © 2024 Disha Computer Institute (Disha Group). All Rights Reserved. | Designed for Career Excellence · 200+ Branches · 20+ Years of Trust.
+    </div>
+  </div>
+</footer>
+
+<!-- ============ HIRE MODAL ============ -->
+<div class="modal fade" id="hireModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0" style="border-radius:18px;overflow:hidden">
+      <div class="modal-header bg-corp text-white border-0">
+        <h5 class="modal-title"><i class="fas fa-handshake me-2"></i>Hire Trained Talent From Disha</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-muted">Tell us your hiring needs — we'll connect you with job-ready, certified candidates from our talent pool at zero recruitment cost.</p>
+        <form id="hireForm" class="row g-3" novalidate>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Company Name</label>
+            <input type="text" class="form-control" placeholder="Your company" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Contact Person</label>
+            <input type="text" class="form-control" placeholder="HR / Hiring manager" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Email / Phone</label>
+            <input type="text" class="form-control" placeholder="Best way to reach you" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Roles to Hire</label>
+            <select class="form-select" required>
+              <option value="" selected disabled>Select profile</option>
+              <option>Accountant / Tally Operator</option>
+              <option>Graphic / UI Designer</option>
+              <option>MIS / Excel Executive</option>
+              <option>Data Analyst</option>
+              <option>Full-Stack / Web Developer</option>
+              <option>Database Administrator</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-semibold">Number of Openings</label>
+            <input type="number" class="form-control" placeholder="e.g. 5" min="1">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-amber rounded-pill w-100 py-2"><i class="fas fa-paper-plane me-2"></i>Submit Hiring Request</button>
+          </div>
+          <div class="col-12">
+            <div id="hireMsg" class="alert alert-success d-none mb-0"><i class="fas fa-circle-check me-1"></i> Request received! Our placement cell will email you a curated shortlist shortly.</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SYLLABUS MODAL ============ -->
+<div class="modal fade" id="syllabusModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0" style="border-radius:18px;overflow:hidden">
+      <div class="modal-header bg-corp text-white border-0">
+        <h5 class="modal-title"><i class="fas fa-file-lines me-2"></i>Request Syllabus</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-muted mb-3">You're requesting the detailed syllabus for:</p>
+        <div class="alert alert-warning fw-semibold" id="syllabusCourse" style="border-radius:12px"></div>
+        <form id="syllabusForm" class="row g-3" novalidate>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Name</label>
+            <input type="text" class="form-control" placeholder="Your name" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Contact Number</label>
+            <input type="tel" class="form-control" placeholder="Mobile number" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-semibold">Email Address</label>
+            <input type="email" class="form-control" placeholder="We'll send the PDF here" required>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-amber rounded-pill w-100 py-2"><i class="fas fa-download me-2"></i>Send Me the Syllabus</button>
+          </div>
+          <div class="col-12">
+            <div id="syllabusMsg" class="alert alert-success d-none mb-0"><i class="fas fa-circle-check me-1"></i> Done! The full syllabus PDF is on its way to your inbox.</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* ===== COURSE CATEGORY FILTER (Vanilla JS) ===== */
+(function(){
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.course-item');
+
+  buttons.forEach(btn=>{
+    btn.addEventListener('click', function(){
+      buttons.forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      const filter = this.getAttribute('data-filter');
+
+      items.forEach(item=>{
+        const cat = item.getAttribute('data-category');
+        const match = (filter === 'all' || filter === cat);
+        if(match){
+          item.style.display = '';
+          // smooth fade-in
+          item.style.opacity = 0;
+          item.style.transform = 'translateY(20px)';
+          requestAnimationFrame(()=>{
+            item.style.transition = 'opacity .45s ease, transform .45s ease';
+            item.style.opacity = 1;
+            item.style.transform = 'translateY(0)';
+          });
+        }else{
+          item.style.transition = 'opacity .25s ease';
+          item.style.opacity = 0;
+          setTimeout(()=>{ item.style.display = 'none'; },250);
+        }
+      });
+    });
+  });
+})();
+
+/* ===== SYLLABUS BUTTON -> MODAL ===== */
+(function(){
+  const syllabusModal = new bootstrap.Modal(document.getElementById('syllabusModal'));
+  document.querySelectorAll('.syllabus-btn').forEach(btn=>{
+    btn.addEventListener('click', function(){
+      const course = this.getAttribute('data-course');
+      document.getElementById('syllabusCourse').innerHTML = '<i class="fas fa-graduation-cap me-2"></i>'+course;
+      document.getElementById('syllabusMsg').classList.add('d-none');
+      document.getElementById('syllabusForm').reset();
+      syllabusModal.show();
+    });
+  });
+})();
+
+/* ===== FORM SUBMISSIONS (front-end demo handling) ===== */
+function handleForm(formId, msgId){
+  const form = document.getElementById(formId);
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      form.classList.add('was-validated');
+      return;
+    }
+    document.getElementById(msgId).classList.remove('d-none');
+    form.reset();
+    form.classList.remove('was-validated');
+    setTimeout(()=>{ document.getElementById(msgId).classList.add('d-none'); }, 6000);
+  });
+}
+handleForm('inquiryForm','formMsg');
+handleForm('hireForm','hireMsg');
+handleForm('syllabusForm','syllabusMsg');
+
+/* ===== NEWSLETTER ===== */
+function subscribeNews(e){
+  e.preventDefault();
+  document.getElementById('newsMsg').textContent = '✓ Subscribed! Watch your inbox for batch & placement alerts.';
+}
+
+/* ===== SMOOTH SCROLL for anchor links ===== */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', function(e){
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({top, behavior:'smooth'});
+      // close mobile navbar
+      const nav = document.getElementById('navMenu');
+      if(nav.classList.contains('show')){ new bootstrap.Collapse(nav).hide(); }
+    }
+  });
+});
+
+/* ===== SCROLL REVEAL ===== */
+(function(){
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('show'); io.unobserve(en.target); }
+    });
+  },{threshold:.15});
+  reveals.forEach(r=>io.observe(r));
+})();
+
+/* ===== ANIMATED HERO METRIC COUNT-UP (subtle) ===== */
+(function(){
+  const nums = document.querySelectorAll('.metric-card .num');
+  let done = false;
+  function run(){
+    if(done) return; done = true;
+    nums.forEach(el=>{
+      const text = el.textContent.trim();
+      const suffix = text.replace(/[0-9]/g,'');
+      const target = parseInt(text);
+      let cur = 0;
+      const step = Math.max(1, Math.ceil(target/40));
+      const t = setInterval(()=>{
+        cur += step;
+        if(cur >= target){ cur = target; clearInterval(t); }
+        el.textContent = cur + suffix;
+      }, 25);
+    });
+  }
+  const hero = document.querySelector('.hero');
+  const io = new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting) run(); }); },{threshold:.3});
+  if(hero) io.observe(hero);
+})();
+</script>
+</body>
+</html>
